@@ -70,7 +70,7 @@ manager = ConnectionManager()
 async def check_device(device_id: str = Query(...)):
     logger.info(f"Verifica licenza: {device_id}")
     return JSONResponse(content={
-        "status": "SUCCESS",
+        "status": "ACTIVE",
         "message": "Device autorizzato",
         "expires_at": "2099-12-31 23:59:59",
         "device_id": device_id,
